@@ -1,0 +1,15 @@
+<p>
+  prac-dd works!
+</p>
+
+<div [formGroup]="myGroup">
+  <select formControlName="NullEmp" (change)="CheckData()">
+    <option [value]="null" disabled>Choose your Employee</option>
+    <option *ngFor="let Emp of Emllst" [value]="Emp.EmpId">{{ Emp.FullName }}</option>
+  </select>
+  </div>
+
+
+<button (click)="login()">Login</button>
+<button (click)="GetListOfEmp()">Get List</button>
+<button (click)="logout()">Log Out</button>
